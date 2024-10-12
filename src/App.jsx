@@ -9,13 +9,13 @@ const App = () => {
   const contacts = useSelector(selectContacts);
   const filter = useSelector(selectNameFilter);
 
-  const filteredContacts = contacts.filter(contact =>
+  const filteredContacts = contacts.filter((contact) =>
     contact.name.toLowerCase().includes(filter.toLowerCase())
   );
 
   return (
     <div>
-      <h1>Phonebook</h1>
+      <h1 style={{ textAlign: "center" }}>Phonebook</h1>
       <ContactForm />
       <SearchBox />
       <ContactList contacts={filteredContacts} />
